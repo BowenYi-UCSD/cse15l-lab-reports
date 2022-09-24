@@ -1,5 +1,5 @@
 # Github 101
-## Note: here is a link to lab report file 1: [Lab Report 1](https://github.com/BowenYi-UCSD/cse15l-lab-reports/blob/main/lab-report-1-week-0.md)
+## Note: here is a link to lab report 1 file: [Lab Report 1](https://github.com/BowenYi-UCSD/cse15l-lab-reports/blob/main/lab-report-1-week-0.md)
 
 ### Self-introduction:
 Hello! My name is **Bowen Yi**, a second-year Math-CS major at UC San Diego :) It's really nice to see you guys! 
