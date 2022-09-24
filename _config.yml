@@ -1,0 +1,9 @@
+# Site settings
+title: Great New Website Title
+author:
+  name: Bowen Yi
+  email: b1yi@ucsd.edu
+description: "Great site about Jekyll on GH-Pages."
+
+# Build settings
+remote_theme: jekyll/minima
