@@ -1,1 +1,1 @@
-This is an example file that shows how things work.
+> *This is an example file that shows how things work.*
