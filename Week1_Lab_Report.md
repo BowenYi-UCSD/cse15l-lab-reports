@@ -20,7 +20,7 @@
 
 <br>
 
-## $${\color{darkred}Part\space1: Installing \space Visual space\ Studio \space Code}$$
+## $${\color{blue}Part\space1: Installing \space Visual space\ Studio \space Code}$$
 > ### The remote connecting activity will be operated on VScode. Usually, we are able to connect to computers remotely by coding on VScode in our personal computer. So, it is rather crucial to install it successfully. 
 
 <br>
@@ -38,7 +38,7 @@
 
 <br>
  
- ## $${\color{yellow}Part \space2: Remotely\space Connecting}$$
+ ## $${\color{violet}Part \space2: Remotely\space Connecting}$$
  >### The next step, we will install a program called OpenSHH, a program that empowers our PCs to connect to remote computers using VScode. We can also deem this program an indispensable context, or environment, for using VScode to connect remotely. 
 
  <br>
