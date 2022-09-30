@@ -1,6 +1,6 @@
 
 # $${Week \space 1 \space Lab \space Report}$$
-### $${\color{black} Foreword \space and \space Note}$$ I referred to nevzatseferoglu's answer in [this stackflow post](https://stackoverflow.com/questions/41604263/how-do-i-display-local-image-in-markdown) to insert images to this markdown file. It's worth of having a look. In addition, if you are interested in a more detailed explanation in the topics I will go over soon, feel free to refer to our [CS 15L course website at UCSD](https://ucsd-cse15l-f22.github.io/week/week1/). **Also, if you are a UCSD student, the first step is to change your password of your assigned CSE 15L course account by Account Lookup Tool. Please completely follow [this doc](https://docs.google.com/document/d/1hs7CyQeh-MdUfM9uv99i8tqfneos6Y8bDU0uhn1wqho/edit) to change password. Any inconsistency, such as "clicking  check password button" can delay your password reset for hours. You may wait for 15 to 60 minutes before the new password becomes effective.*** 
+### $${\color{red} Foreword \space and \space Note}$$ I referred to nevzatseferoglu's answer in [this stackflow post](https://stackoverflow.com/questions/41604263/how-do-i-display-local-image-in-markdown) to insert images to this markdown file. It's worth of having a look. In addition, if you are interested in a more detailed explanation in the topics I will go over soon, feel free to refer to our [CS 15L course website at UCSD](https://ucsd-cse15l-f22.github.io/week/week1/). **Also, if you are a UCSD student, the first step is to change your password of your assigned CSE 15L course account by Account Lookup Tool. Please completely follow [this doc](https://docs.google.com/document/d/1hs7CyQeh-MdUfM9uv99i8tqfneos6Y8bDU0uhn1wqho/edit) to change password. Any inconsistency, such as "clicking  check password button" can delay your password reset for hours. You may wait for 15 to 60 minutes before the new password becomes effective.*** 
 <br>
 
 
@@ -20,7 +20,7 @@
 
 <br>
 
-## $${Part\space1: Installing \space Visual space\ Studio \space Code}$$
+## $${\color{darkred}Part\space1: Installing \space Visual space\ Studio \space Code}$$
 > ### The remote connecting activity will be operated on VScode. Usually, we are able to connect to computers remotely by coding on VScode in our personal computer. So, it is rather crucial to install it successfully. 
 
 <br>
@@ -38,7 +38,7 @@
 
 <br>
  
- ## $${Part \space2: Remotely\space Connecting}$$
+ ## $${\color{yellow}Part \space2: Remotely\space Connecting}$$
  >### The next step, we will install a program called OpenSHH, a program that empowers our PCs to connect to remote computers using VScode. We can also deem this program an indispensable context, or environment, for using VScode to connect remotely. 
 
  <br>
@@ -93,7 +93,7 @@ Sun Jan 02, 2022 11:28pm - Prepping cs15lfa22
 
 <br>
 
-## $${Part \space3: Trying \space Some\space Commands}$$
+## $${\color{green}Part \space3: Trying \space Some\space Commands}$$
 >### Congrats on entering your server! Now, it's time to explore some useful commands on your PC and remote computer. 
 <br>
 
@@ -113,7 +113,7 @@ Sun Jan 02, 2022 11:28pm - Prepping cs15lfa22
 
 <br> 
 
-## $${Part \space 4: Moving \space Files \space with \space scp \space }$$
+## $${\color{purple}Part \space 4: Moving \space Files \space with \space scp \space }$$
 >### One key step to work remotely is being able to copy files back and forth between computers. We will use the command, `scp`, to do this. Here are steps to implement this command:
 <br>
 
@@ -126,7 +126,7 @@ Sun Jan 02, 2022 11:28pm - Prepping cs15lfa22
 
 <br>
 
-## $${Part \space 5: Setting \space an \space SSH \space Key}$$
+## $${\color{orange}Part \space 5: Setting \space an \space SSH \space Key}$$
 >### If you remember how my terminal looked like at the end of Part 2, you may wonder why I doesn't need a password to log in, which saves a lot of time! I actually used a technique called public key. The idea behind public key is that program, called ssh-keygen, creates a pair of files called the public key and private key. You copy the public key to a particular location on the server, and the private key in a particular location on the client. Then, the ssh command can use the pair of files in place of your password. This is a common setup step in lots of work environments that involve code on a server (Cited from the course website).
 
 <br>
@@ -179,7 +179,7 @@ $ scp /Users/joe/.ssh/id_rsa.pub cs15lfa22@ieng6.ucsd.edu:~/.ssh/authorized_keys
   
 <br>
 
-## $${Part \space 6: Optimizing \space Remote \space Running}$$
+## $${\color{pink}Part \space 6: Optimizing \space Remote \space Running}$$
 
 
 
