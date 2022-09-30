@@ -193,6 +193,15 @@ $ scp /Users/joe/.ssh/id_rsa.pub cs15lfa22@ieng6.ucsd.edu:~/.ssh/authorized_keys
  <br>
 
  ### You'll notice that this line of code actually implements several commands together. We can do that by seperating each command with a semicolon. 
+
+<br>
+
+<br>
+
+ ## That comes to the end of this lab work. Hope you enjoy it. Please feel free to explore our course website if you're interested in learning more about today's content. 
+ 
+ ## $${See \space you \space next \space week!}$$
+
    
 
 
