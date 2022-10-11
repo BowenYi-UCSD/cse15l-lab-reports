@@ -33,7 +33,7 @@
 
  
  - ### Once installed, this window (see the image below) should welcome you on VScode, though it differs across different operating systems (Since I'm using Windows, Mac users may see a different main page from mine).  
- ![VScode homepage](Images/VScode.md)
+ ![VScode homepage](Images/VScode.png)
  
 
 <br>
@@ -88,7 +88,7 @@ Sun Jan 02, 2022 11:28pm - Prepping cs15lfa22
 <br>
 
   - ### Later on, when you log in, your terminal will look like this (there should be a line of code: `Password:` after you type the ssh command. It's missing here because I used a technique called public key (see part 7 of our [course website](https://ucsd-cse15l-f22.github.io/week/week1/#part-3--visual-studio-code)), which once implemented skips the password asking):  
-  ![terminal after conneting remotely](Images/Remote_connecting.md)
+  ![terminal after conneting remotely](Images/Remote_connecting.png)
 
 
 <br>
@@ -98,7 +98,7 @@ Sun Jan 02, 2022 11:28pm - Prepping cs15lfa22
 <br>
 
 - ### Here are some commands I've tried, but you are welcome to try more commands listed in this comprehensive [Linux commands dictionary](https://www.rapidtables.com/code/linux/ls.html). 
-![command_examples](Images/Command_Examples.md)
+![command_examples](Images/Command_Examples.png)
 
 <br>
 
@@ -121,8 +121,8 @@ Sun Jan 02, 2022 11:28pm - Prepping cs15lfa22
 <br>
 
 - ###  There's an example to help you understand better. I've created a file, named [WhereAmI.java](cs15l-lab1/WhereAmI.java), on my computer. After typing the command `scp WhereAmI.java cs15lfa22zz@ieng6.ucsd.edu,` I compile the file on the remote computer and can see this chunk of code in my terminal. If you try the same thing, you should be able to see similar code.
-![scpExample1](Images/scpExample1.md)
-![scpExample2](Images/scpExample2.md)
+![scpExample1](Images/scpExample1.png)
+![scpExample2](Images/scpExample2.png)
 
 <br>
 
@@ -175,7 +175,7 @@ $ scp /Users/joe/.ssh/id_rsa.pub cs15lfa22@ieng6.ucsd.edu:~/.ssh/authorized_keys
 <br>
 
 2. ### If you are a **Windows** user, your first substep will be different. Refer to [this document](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement#user-key-generation) for more information. Other steps should be the same. Finally, your terminal will be like this if every command runs successfully; and you will also be able to log in without password:
-![public_Key_in_Terminal](Images/publicKey.md)
+![public_Key_in_Terminal](Images/publicKey.png)
   
 <br>
 
@@ -188,7 +188,7 @@ $ scp /Users/joe/.ssh/id_rsa.pub cs15lfa22@ieng6.ucsd.edu:~/.ssh/authorized_keys
 <br>
 
  ### I want to copy WhereAmI.java file to the remote server and compile it, running the System.out.println("I've been copied successfully) method inside. Here's what I did: (in case the image is blurry, my command is `scp whereAmI.java cs15lfa22ek@ieng6.ucsd.edu; javac WhereAmI.java; java WhereAmI`)
- ![Optimizing_Example](Images/Optimizaing.md)
+ ![Optimizing_Example](Images/Optimizaing.png)
 
  <br>
 

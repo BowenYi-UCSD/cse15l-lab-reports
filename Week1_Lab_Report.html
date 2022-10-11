@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Week1_Lab_Report.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="week-space-1-space-lab-space-report">$${Week \space 1 \space Lab \space Report}$$</h1>
+<h3 id="colorred-foreword-space-and-space-note-i-referred-to-nevzatseferoglus-answer-in-this-stackflow-post-to-insert-images-to-this-markdown-file-its-worth-of-having-a-look-in-addition-if-you-are-interested-in-a-more-detailed-explanation-in-the-topics-i-will-go-over-soon-feel-free-to-refer-to-our-cs-15l-course-website-at-ucsd-also-if-you-are-a-ucsd-student-the-first-step-is-to-change-your-password-of-your-assigned-cse-15l-course-account-by-account-lookup-tool-please-completely-follow-this-doc-to-change-password-any-inconsistency-such-as-%22clicking-check-password-button%22-can-delay-your-password-reset-for-hours-you-may-wait-for-15-to-60-minutes-before-the-new-password-becomes-effective">$${\color{red} Foreword \space and \space Note}$$ I referred to nevzatseferoglu's answer in <a href="https://stackoverflow.com/questions/41604263/how-do-i-display-local-image-in-markdown">this stackflow post</a> to insert images to this markdown file. It's worth of having a look. In addition, if you are interested in a more detailed explanation in the topics I will go over soon, feel free to refer to our <a href="https://ucsd-cse15l-f22.github.io/week/week1/">CS 15L course website at UCSD</a>. <strong>Also, if you are a UCSD student, the first step is to change your password of your assigned CSE 15L course account by Account Lookup Tool. Please completely follow <a href="https://docs.google.com/document/d/1hs7CyQeh-MdUfM9uv99i8tqfneos6Y8bDU0uhn1wqho/edit">this doc</a> to change password. Any inconsistency, such as &quot;clicking  check password button&quot; can delay your password reset for hours. You may wait for 15 to 60 minutes before the new password becomes effective.</strong>*</h3>
+<br>
+<h2 id="howdy-my-dear-readers-this-is-bowen-yi-welcome-to-this-weeks-lab-report-today-i-will-go-through-almost-everything-you-need-to-know-about-remote-connecting-heres-a-directory-of-the-report-content">Howdy, my dear readers! This is Bowen Yi. Welcome to this week's lab report. Today, I will go through almost everything you need to know about remote connecting. Here's a directory of the report content:</h2>
+<blockquote>
+<p><a href="*">1. Installing VScode</a></p>
+<p><a href="*">2. Remotely Connecting</a></p>
+<p><a href="*">3. Trying Some Commands</a></p>
+<p><a href="*">4. Moving Files with scp</a></p>
+<p><a href="*">5. Setting an SSH Key</a></p>
+<p><a href="*">6. Optimizing Remote Running</a></p>
+</blockquote>
+<br>
+<h2 id="colorbluepartspace1-installing-space-visual-space-studio-space-code">$${\color{blue}Part\space1: Installing \space Visual space\ Studio \space Code}$$</h2>
+<blockquote>
+<h3 id="the-remote-connecting-activity-will-be-operated-on-vscode-usually-we-are-able-to-connect-to-computers-remotely-by-coding-on-vscode-in-our-personal-computer-so-it-is-rather-crucial-to-install-it-successfully">The remote connecting activity will be operated on VScode. Usually, we are able to connect to computers remotely by coding on VScode in our personal computer. So, it is rather crucial to install it successfully.</h3>
+</blockquote>
+<br>
+<h3 id="to-install-vscode-follow-the-steps-below">To install VScode, follow the steps below:</h3>
+<ul>
+<li>
+<h3 id="go-to-the-vscode-website-httpscodevisualstudiocom-follow-the-instructions-and-download-it-on-your-computer-reminder-make-sure-to-download-the-version-corresponding-to-your-operating-systems-like-windows-and-mac">Go to the VScode website:  <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>. Follow the instructions and download it on your computer. <strong>Reminder: make sure to download the version corresponding to your operating systems, like Windows and Mac.</strong></h3>
+</li>
+</ul>
+ <br>
+<ul>
+<li>
+<h3 id="once-installed-this-window-see-the-image-below-should-welcome-you-on-vscode-though-it-differs-across-different-operating-systems-since-im-using-windows-mac-users-may-see-a-different-main-page-from-mine">Once installed, this window (see the image below) should welcome you on VScode, though it differs across different operating systems (Since I'm using Windows, Mac users may see a different main page from mine).</h3>
+</li>
+</ul>
+<p><img src="Images/VScode.md" alt="VScode homepage"></p>
+<br>
+<h2 id="colorvioletpart-space2-remotelyspace-connecting">$${\color{violet}Part \space2: Remotely\space Connecting}$$</h2>
+<blockquote>
+<h3 id="the-next-step-we-will-install-a-program-called-openshh-a-program-that-empowers-our-pcs-to-connect-to-remote-computers-using-vscode-we-can-also-deem-this-program-an-indispensable-context-or-environment-for-using-vscode-to-connect-remotely">The next step, we will install a program called OpenSHH, a program that empowers our PCs to connect to remote computers using VScode. We can also deem this program an indispensable context, or environment, for using VScode to connect remotely.</h3>
+</blockquote>
+ <br>
+<ul>
+<li>
+<h3 id="follow-this-article-to-install-openshh-and-make-sure-you-install-the-client-meaning-your-own-computer-version-not-the-server-meaning-remote-computers-version">Follow <a href="https://ucsd-cse15l-f22.github.io/week/week1/#part-4--remotely-connecting">this article</a> to install OpenSHH and make sure you install the <strong>client</strong> (meaning your own computer) version, not the <strong>server</strong> (meaning remote computers) version.</h3>
+</li>
+</ul>
+ <br>
+<ul>
+<li>
+<h3 id="after-installing-openshh-open-a-new-terminal-in-vscode-to-do-so-you-can-try">After installing OpenSHH, open a new terminal in VScode. To do so, you can try:</h3>
+<ul>
+<li>Ctrl + `</li>
+<li>Command + `</li>
+<li>Use the menu option on top left: Terminal → new terminal</li>
+</ul>
+</li>
+</ul>
+<br>
+<ul>
+<li>
+<h3 id="then-run-this-command-on-the-terminal--ssh-cs15lfa22zzieng6ucsdedu-replace-cs15lfa22zz-by-your-own-username-for-cse-15l-here-the-ssh-command-stands-for-secure-shell-refer-to-this-article-for-more-details-the-function-of-this-command-is-that-it-initiates-the-process-to-enter-the-server-identified-by-your-course-username">Then, run this command on the terminal: <code>$ ssh cs15lfa22zz@ieng6.ucsd.edu</code>. Replace <code>cs15lfa22zz</code> by your own username for CSE 15L. Here, the ssh command stands for secure shell. Refer to <a href="https://www.redhat.com/sysadmin/ways-use-ssh#:~:text=Secure%20shell%20(SSH)%20is%20one,easy%20to%20add%20to%20Windows.">this article</a> for more details. The function of this command is that: it initiates the process to enter the server identified by your course username.</h3>
+</li>
+</ul>
+ <br>
+<ul>
+<li>
+<h3 id="if-your-username-has-been-input-correctly-you-will-see-this-chunk-of-code-below-just-type-%22yes%22-in-response-and-press-enter-after-that-you-will-input-your-password-which-wont-show-in-the-terminal-while-typing">If your username has been input correctly, you will see this chunk of code below. Just type &quot;yes&quot; in response and press enter. After that, you will input your password (which won't show in the terminal while typing).</h3>
+</li>
+</ul>
+<pre class="hljs"><code><div>⤇ ssh cs15lfa22zz@ieng6.ucsd.edu
+The authenticity of host 'ieng6.ucsd.edu (128.54.70.227)' can't be established.
+RSA key fingerprint is SHA256:ksruYwhnYH+sySHnHAtLUHngrPEyZTDl/1x99wUQcec.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+Password: 
+</div></code></pre>
+<br>
+<ul>
+<li>
+<h3 id="once-you-give-your-password-and-log-in-the-whole-interaction-will-be-similar-to-this-which-means-you-have-successfully-entered-the-remote-computer">Once you give your password and log in, the whole interaction will be similar to this, which means you have successfully entered the remote computer.</h3>
+</li>
+</ul>
+<pre class="hljs"><code><div># Now on remote server
+Last login: Sun Jan  2 14:03:05 2022 from 107-217-10-235.lightspeed.sndgca.sbcglobal.net
+quota: No filesystem specified.
+Hello cs15lfa22zz, you are currently logged into ieng6-203.ucsd.edu
+
+You are using 0% CPU on this system
+
+Cluster Status 
+Hostname     Time    #Users  Load  Averages  
+ieng6-201   23:25:01   0  0.08,  0.17,  0.11
+ieng6-202   23:25:01   1  0.09,  0.15,  0.11
+ieng6-203   23:25:01   1  0.08,  0.15,  0.11
+
+Sun Jan 02, 2022 11:28pm - Prepping cs15lfa22
+</div></code></pre>
+<br>
+<ul>
+<li>
+<h3 id="later-on-when-you-log-in-your-terminal-will-look-like-this-there-should-be-a-line-of-code-password-after-you-type-the-ssh-command-its-missing-here-because-i-used-a-technique-called-public-key-see-part-7-of-our-course-website-which-once-implemented-skips-the-password-asking">Later on, when you log in, your terminal will look like this (there should be a line of code: <code>Password:</code> after you type the ssh command. It's missing here because I used a technique called public key (see part 7 of our <a href="https://ucsd-cse15l-f22.github.io/week/week1/#part-3--visual-studio-code">course website</a>), which once implemented skips the password asking):</h3>
+</li>
+</ul>
+<p><img src="Images/Remote_connecting.md" alt="terminal after conneting remotely"></p>
+<br>
+<h2 id="colorgreenpart-space3-trying-space-somespace-commands">$${\color{green}Part \space3: Trying \space Some\space Commands}$$</h2>
+<blockquote>
+<h3 id="congrats-on-entering-your-server-now-its-time-to-explore-some-useful-commands-on-your-pc-and-remote-computer">Congrats on entering your server! Now, it's time to explore some useful commands on your PC and remote computer.</h3>
+</blockquote>
+<br>
+<ul>
+<li>
+<h3 id="here-are-some-commands-ive-tried-but-you-are-welcome-to-try-more-commands-listed-in-this-comprehensive-linux-commands-dictionary">Here are some commands I've tried, but you are welcome to try more commands listed in this comprehensive <a href="https://www.rapidtables.com/code/linux/ls.html">Linux commands dictionary</a>.</h3>
+</li>
+</ul>
+<p><img src="Images/Command_Examples.md" alt="command_examples"></p>
+<br>
+<h3 id="here-is-a-breif-explanation-on-the-function-of-those-commands-i-implemented-above">Here is a breif explanation on the function of those commands I implemented above:</h3>
+<ul>
+<li>
+<h3 id="cd--change-the-current-directory-to-the-home-directory"><code>cd ~</code>: change the current directory to the home directory</h3>
+</li>
+<li>
+<h3 id="cd-functions-same-as-cd"><code>cd</code>: functions same as cd ~</h3>
+</li>
+<li>
+<h3 id="ls--lat-show-all-files-including-those-hidden-ones-in-long-format-and-chronological-order"><code>ls -lat</code>: show all files, including those hidden ones, in long format and chronological order</h3>
+</li>
+<li>
+<h3 id="ls--a-show-hidden-files"><code>ls -a</code>: show hidden files</h3>
+</li>
+<li>
+<h3 id="ls-directory-it-should-show-me-the-file-whose-path-is-homelinuxieng6cs15lfa22cs15lfa22dy-however-because-we-are-required-a-password-to-enter-this-file-it-shows-me-this-default-message-permission-denied"><code>ls &lt;directory&gt;</code>: it should show me the file whose path is /home/linux/ieng6/cs15lfa22/cs15lfa22dy. However, because we are required a password to enter this file, it shows me this default message, “Permission denied.”</h3>
+</li>
+<li>
+<h3 id="cp-directory1-where-we-copy-files-from-directory2-where-we-want-to-copy-and-send-our-files-in-directory-1-to-copy-files-in-one-directory-to-another-directory-since-our-destination-directory-is-missing-it-shows-me-a-missing-destination-file-message"><code>cp &lt;directory1, where we copy files from&gt; &lt;directory2, where we want to copy and send our files in directory 1 to&gt;</code>: copy files in one directory to another directory. Since our destination directory is missing, it shows me a “missing destination file” message.</h3>
+</li>
+<li>
+<h3 id="cat-it-will-concatenate-and-read-files-since-there-is-no-such-as-file-on-this-path-it-shows-me-the-message-no-such-file-or-directory"><code>cat</code>: it will concatenate and read files. Since there is no such as file on this path, it shows me the message, “No such file or directory.”</h3>
+</li>
+</ul>
+<br> 
+<h2 id="colorpurplepart-space-4-moving-space-files-space-with-space-scp-space">$${\color{purple}Part \space 4: Moving \space Files \space with \space scp \space }$$</h2>
+<blockquote>
+<h3 id="one-key-step-to-work-remotely-is-being-able-to-copy-files-back-and-forth-between-computers-we-will-use-the-command-scp-to-do-this-here-are-steps-to-implement-this-command">One key step to work remotely is being able to copy files back and forth between computers. We will use the command, <code>scp</code>, to do this. Here are steps to implement this command:</h3>
+</blockquote>
+<br>
+<ul>
+<li>
+<h3 id="we-can-only-run-scp-on-our-computer-the-grammar-for-this-command-is-scp-directoryfile-name-that-we-want-to-copy-to-the-destination-file-in-remote-computers-destination-file-on-our-own-command-for-example-scp-whereamijava-cs15lfa22zzieng6ucsdedu-will-copy-the-file-whereamijava-in-our-computer-to-the-directory-in-the-remote-server-whose-path-being-cs15lfa22zzieng6ucsdedu">we can only run <code>scp</code> on our computer. The grammar for this command is: <code>scp &lt;directory/file name that we want to copy to the destination file in remote computers&gt; &lt;destination file&gt;</code> on our own command. For example, <code>scp &lt;WhereAmI.java&gt; &lt;cs15lfa22zz@ieng6.ucsd.edu:~/&gt;</code> will copy the file WhereAmI.java in our computer to the directory in the remote server whose path being <code>cs15lfa22zz@ieng6.ucsd.edu:~/</code>.</h3>
+</li>
+</ul>
+<br>
+<ul>
+<li>
+<h3 id="theres-an-example-to-help-you-understand-better-ive-created-a-file-named-whereamijava-on-my-computer-after-typing-the-command-scp-whereamijava-cs15lfa22zzieng6ucsdedu-i-compile-the-file-on-the-remote-computer-and-can-see-this-chunk-of-code-in-my-terminal-if-you-try-the-same-thing-you-should-be-able-to-see-similar-code">There's an example to help you understand better. I've created a file, named <a href="cs15l-lab1/WhereAmI.java">WhereAmI.java</a>, on my computer. After typing the command <code>scp WhereAmI.java cs15lfa22zz@ieng6.ucsd.edu,</code> I compile the file on the remote computer and can see this chunk of code in my terminal. If you try the same thing, you should be able to see similar code.</h3>
+</li>
+</ul>
+<p><img src="Images/scpExample1.md" alt="scpExample1">
+<img src="Images/scpExample2.md" alt="scpExample2"></p>
+<br>
+<h2 id="colororangepart-space-5-setting-space-an-space-ssh-space-key">$${\color{orange}Part \space 5: Setting \space an \space SSH \space Key}$$</h2>
+<blockquote>
+<h3 id="if-you-remember-how-my-terminal-looked-like-at-the-end-of-part-2-you-may-wonder-why-i-doesnt-need-a-password-to-log-in-which-saves-a-lot-of-time-i-actually-used-a-technique-called-public-key-the-idea-behind-public-key-is-that-program-called-ssh-keygen-creates-a-pair-of-files-called-the-public-key-and-private-key-you-copy-the-public-key-to-a-particular-location-on-the-server-and-the-private-key-in-a-particular-location-on-the-client-then-the-ssh-command-can-use-the-pair-of-files-in-place-of-your-password-this-is-a-common-setup-step-in-lots-of-work-environments-that-involve-code-on-a-server-cited-from-the-course-website">If you remember how my terminal looked like at the end of Part 2, you may wonder why I doesn't need a password to log in, which saves a lot of time! I actually used a technique called public key. The idea behind public key is that program, called ssh-keygen, creates a pair of files called the public key and private key. You copy the public key to a particular location on the server, and the private key in a particular location on the client. Then, the ssh command can use the pair of files in place of your password. This is a common setup step in lots of work environments that involve code on a server (Cited from the course website).</h3>
+</blockquote>
+<br>
+<ol>
+<li>
+<h3 id="if-you-are-a-mac-user">If you are a <strong>Mac</strong> user,</h3>
+<ul>
+<li>
+<h3 id="type-the-key-generator-command-on-the-terminal-of-your-own-computer-which-will-be-ssh-keygen-then-press-enter-all-the-way-until-a-diagram-shows-in-your-terminal">Type the key generator command on the terminal of <strong>your own computer</strong>, which will be: <code>ssh-keygen</code>. Then, press enter all the way until a diagram shows in your terminal.</h3>
+</li>
+<li>
+<h3 id="this-created-two-new-files-on-your-system-the-private-key-in-a-file-idrsa-and-the-public-key-in-a-file-idrsapub-stored-in-the-ssh-directory-on-your-computer">This created two new files on your system; the private key (in a file id_rsa) and the public key (in a file id_rsa.pub), stored in the .ssh directory on your computer.</h3>
+</li>
+<li>
+<h3 id="once-done-it-we-start-to-copy-the-public-key-from-our-computer-to-the-server-by-logging-in-the-account-ssh-cs15lfa22zzieng6ucsdedu-and-type-your-password">Once done it, we start to copy the public key from our computer to the server by logging in the account: <code>ssh cs15lfa22zz@ieng6.ucsd.edu</code> and type your password.</h3>
+</li>
+<li>
+<h3 id="once-logged-in-make-a-new-directory-ssh-by-typing-the-command-mkdir-ssh">Once logged in, make a new directory .ssh by typing the command, <code>mkdir .ssh</code>.</h3>
+</li>
+<li>
+<h3 id="finally-use-the-scp-command-followed-by-the-path-to-where-our-public-file-is-saved-and-the-path-of-the-ssh-file-we-just-created-follow-the-pattern-of-the-chunk-of-code-below">Finally, use the scp command followed by the path to where our public file is saved and the path of the .ssh file we just created. Follow the pattern of the chunk of code below:</h3>
+</li>
+</ul>
+</li>
+</ol>
+<pre class="hljs"><code><div># on client (your computer)
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/joe/.ssh/id_rsa): /Users/joe/.ssh/id_rsa
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /Users/joe/.ssh/id_rsa.
+Your public key has been saved in /Users/joe/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:jZaZH6fI8E2I1D35hnvGeBePQ4ELOf2Ge+G0XknoXp0 joe@Joes-Mac-mini.local
+The key's randomart image is:
++---[RSA 3072]----+
+|                 |
+|       . . + .   |
+|      . . B o .  |
+|     . . B * +.. |
+|      o S = *.B. |
+|       = = O.*.*+|
+|        + * *.BE+|
+|           +.+.o |
+|             ..  |
++----[SHA256]-----+
+</div></code></pre>
+<pre class="hljs"><code><div># on client
+$ ssh cs15lfa22zz@ieng6.ucsd.edu
+&lt;Enter Password&gt;
+# now on server
+$ mkdir .ssh
+$ &lt;logout&gt;
+# back on client
+$ scp /Users/joe/.ssh/id_rsa.pub cs15lfa22@ieng6.ucsd.edu:~/.ssh/authorized_keys
+# You use your username and the path you saw in the command above
+</div></code></pre>
+<br>
+<ol start="2">
+<li>
+<h3 id="if-you-are-a-windows-user-your-first-substep-will-be-different-refer-to-this-document-for-more-information-other-steps-should-be-the-same-finally-your-terminal-will-be-like-this-if-every-command-runs-successfully-and-you-will-also-be-able-to-log-in-without-password">If you are a <strong>Windows</strong> user, your first substep will be different. Refer to <a href="https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement#user-key-generation">this document</a> for more information. Other steps should be the same. Finally, your terminal will be like this if every command runs successfully; and you will also be able to log in without password:</h3>
+</li>
+</ol>
+<p><img src="Images/publicKey.md" alt="public_Key_in_Terminal"></p>
+<br>
+<h2 id="colorpinkpart-space-6-optimizing-space-remote-space-running">$${\color{pink}Part \space 6: Optimizing \space Remote \space Running}$$</h2>
+<blockquote>
+<h3 id="based-on-what-we-have-learned-so-far-we-can-use-some-shortcuts-to-make-inter-computer-copy-faster-there-are-multiple-ways-you-can-do-it-and-ill-show-you-my-way-below">Based on what we have learned so far, we can use some shortcuts to make inter-computer copy faster. There are multiple ways you can do it and I'll show you my way below.</h3>
+</blockquote>
+<br>
+<h3 id="i-want-to-copy-whereamijava-file-to-the-remote-server-and-compile-it-running-the-systemoutprintln%22ive-been-copied-successfully-method-inside-heres-what-i-did-in-case-the-image-is-blurry-my-command-is-scp-whereamijava-cs15lfa22ekieng6ucsdedu-javac-whereamijava-java-whereami">I want to copy WhereAmI.java file to the remote server and compile it, running the System.out.println(&quot;I've been copied successfully) method inside. Here's what I did: (in case the image is blurry, my command is <code>scp whereAmI.java cs15lfa22ek@ieng6.ucsd.edu; javac WhereAmI.java; java WhereAmI</code>)</h3>
+<p><img src="Images/Optimizaing.md" alt="Optimizing_Example"></p>
+ <br>
+<h3 id="youll-notice-that-this-line-of-code-actually-implements-several-commands-together-we-can-do-that-by-seperating-each-command-with-a-semicolon">You'll notice that this line of code actually implements several commands together. We can do that by seperating each command with a semicolon.</h3>
+<br>
+<br>
+<h2 id="that-comes-to-the-end-of-this-lab-work-hope-you-enjoy-it-please-feel-free-to-explore-our-course-website-if-youre-interested-in-learning-more-about-todays-content">That comes to the end of this lab work. Hope you enjoy it. Please feel free to explore our course website if you're interested in learning more about today's content.</h2>
+<h2 id="see-space-you-space-next-space-week">$${See \space you \space next \space week!}$$</h2>
+
+</body>
+</html>
