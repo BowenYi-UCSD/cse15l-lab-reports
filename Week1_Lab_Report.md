@@ -117,7 +117,7 @@ Sun Jan 02, 2022 11:28pm - Prepping cs15lfa22
 
 <br> 
 
-## Part 4:: Moving Files with scp 
+## Part 4: Moving Files with scp 
 >### One key step to work remotely is being able to copy files back and forth between computers. We will use the command, `scp`, to do this. Here are steps to implement this command:
 <br>
 
