@@ -165,6 +165,7 @@ The key's randomart image is:
 |             ..  |
 +----[SHA256]-----+
 ```
+<br>
 ```
 # on client
 $ ssh cs15lfa22zz@ieng6.ucsd.edu
