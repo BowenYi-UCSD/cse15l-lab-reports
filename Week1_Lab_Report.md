@@ -71,8 +71,9 @@ Password:
 <br>
 
 - ### Once you give your password and log in, the whole interaction will be similar to this, which means you have successfully entered the remote computer.
-```
+
 # Now on remote server
+```
 Last login: Sun Jan  2 14:03:05 2022 from 107-217-10-235.lightspeed.sndgca.sbcglobal.net
 quota: No filesystem specified.
 Hello cs15lfa22zz, you are currently logged into ieng6-203.ucsd.edu
@@ -104,7 +105,7 @@ Sun Jan 02, 2022 11:28pm - Prepping cs15lfa22
 
 <br>
 
-### Here is a breif explanation on the function of those commands I implemented above:
+### Here is a brief explanation on the function of those commands I implemented above:
 - ### `cd ~`: change the current directory to the home directory
 - ### `cd`: functions same as cd ~
 - ### `ls -lat`: show all files, including those hidden ones, in long format and chronological order
