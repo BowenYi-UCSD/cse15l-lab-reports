@@ -40,7 +40,7 @@
 
  <br>
  
-  Part 2: Remotely Connecting
+ ## Part 2: Remotely Connecting
  >### The next step, we will install a program called OpenSHH, a program that empowers our PCs to connect to remote computers using VScode. We can also deem this program an indispensable context, or environment, for using VScode to connect remotely. 
 
  <br>
