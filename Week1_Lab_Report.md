@@ -176,6 +176,7 @@ $ scp /Users/joe/.ssh/id_rsa.pub cs15lfa22@ieng6.ucsd.edu:~/.ssh/authorized_keys
 <br>
 
 2. ### If you are a **Windows** user, your first substep will be different. Refer to [this document](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement#user-key-generation) for more information. Other steps should be the same. Finally, your terminal will be like this if every command runs successfully; and you will also be able to log in without password:
+
 ![public_Key_in_Terminal](Images/publicKey.png)
   
 <br>
