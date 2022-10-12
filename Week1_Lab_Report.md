@@ -193,7 +193,7 @@ $ scp /Users/joe/.ssh/id_rsa.pub cs15lfa22@ieng6.ucsd.edu:~/.ssh/authorized_keys
 
 <br>
 
- ### I want to copy WhereAmI.java file to the remote server and compile it, running the System.out.println("I've been copied successfully) method inside. Here's what I did: (in case the image is blurry, my command is `scp whereAmI.java cs15lfa22ek@ieng6.ucsd.edu; javac WhereAmI.java; java WhereAmI`)
+I want to copy WhereAmI.java file to the remote server and compile it, running the System.out.println("I've been copied successfully) method inside. Here's what I did: (in case the image is blurry, my command is `scp whereAmI.java cs15lfa22ek@ieng6.ucsd.edu; javac WhereAmI.java; java WhereAmI`)
  ![Optimizing_Example](Images/Optimizaing.png)
 
  
