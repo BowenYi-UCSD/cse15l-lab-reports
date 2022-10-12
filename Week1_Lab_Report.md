@@ -143,6 +143,7 @@ Sun Jan 02, 2022 11:28pm - Prepping cs15lfa22
      - ### Finally, use the scp command followed by the path to where our public file is saved and the path of the .ssh file we just created. Follow the pattern of the chunk of code below: 
 ```
 # on client (your computer)
+```
 $ ssh-keygen
 Generating public/private rsa key pair.
 Enter file in which to save the key (/Users/joe/.ssh/id_rsa): /Users/joe/.ssh/id_rsa
@@ -164,8 +165,10 @@ The key's randomart image is:
 |           +.+.o |
 |             ..  |
 +----[SHA256]-----+
+```
 
 # on client
+```
 $ ssh cs15lfa22zz@ieng6.ucsd.edu
 <Enter Password>
 # now on server
