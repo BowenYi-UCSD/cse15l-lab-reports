@@ -196,13 +196,10 @@ $ scp /Users/joe/.ssh/id_rsa.pub cs15lfa22@ieng6.ucsd.edu:~/.ssh/authorized_keys
  ### I want to copy WhereAmI.java file to the remote server and compile it, running the System.out.println("I've been copied successfully) method inside. Here's what I did: (in case the image is blurry, my command is `scp whereAmI.java cs15lfa22ek@ieng6.ucsd.edu; javac WhereAmI.java; java WhereAmI`)
  ![Optimizing_Example](Images/Optimizaing.png)
 
- <br>
+ 
 
  ### You'll notice that this line of code actually implements several commands together. We can do that by seperating each command with a semicolon. 
 
-<br>
-
-<br>
 
  ## That comes to the end of this lab work. Hope you enjoy it. Please feel free to explore our course website if you're interested in learning more about today's content. 
  
