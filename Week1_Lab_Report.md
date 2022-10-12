@@ -141,6 +141,7 @@ Sun Jan 02, 2022 11:28pm - Prepping cs15lfa22
      - ### Once done it, we start to copy the public key from our computer to the server by logging in the account: `ssh cs15lfa22zz@ieng6.ucsd.edu` and type your password. 
      - ### Once logged in, make a new directory .ssh by typing the command, `mkdir .ssh`.
      - ### Finally, use the scp command followed by the path to where our public file is saved and the path of the .ssh file we just created. Follow the pattern of the chunk of code below: 
+
 ```
 # on client (your computer)
 $ ssh-keygen
@@ -164,7 +165,8 @@ The key's randomart image is:
 |           +.+.o |
 |             ..  |
 +----[SHA256]-----+
-
+```
+```
 # on client
 $ ssh cs15lfa22zz@ieng6.ucsd.edu
 <Enter Password>
